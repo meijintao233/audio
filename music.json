@@ -1,0 +1,44 @@
+{
+    "musicList":[
+        {
+            "music":"images/feng.mp3",
+            "name":"起风了",
+            "author":"啦啦啦"
+        },
+        {
+            "music":"images/like.mp3",
+            "name":"不仅仅是喜欢",
+            "author":"啦啦啦"
+        },
+        {
+            "music":"images/here.mp3",
+            "name":"Here we are go",
+            "author":"啦啦啦"
+        },
+        {
+            "music":"images/here.mp3",
+            "name":"Here we are go",
+            "author":"啦啦啦"
+        },
+        {
+            "music":"images/here.mp3",
+            "name":"Here we are go",
+            "author":"啦啦啦"
+        },
+        {
+            "music":"images/here.mp3",
+            "name":"Here we are go",
+            "author":"啦啦啦"
+        },
+        {
+            "music":"images/here.mp3",
+            "name":"Here we are go",
+            "author":"啦啦啦"
+        },
+        {
+            "music":"images/qiqiu.flac",
+            "name":"起风了",
+            "author":"啦啦啦"
+        }
+    ]
+}

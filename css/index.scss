@@ -1,0 +1,272 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 500px;
+    margin: 0 auto;
+}
+
+li{
+    list-style: none;
+}
+
+.show{
+    display: block !important;
+}
+
+.hide{
+    display: none !important;
+}
+
+.shengl{
+    // line-height: 1.4;    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+//clear
+.clearfix,.clear {
+    *zoom: 1;
+    &:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+}
+
+.player-on{
+    &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%,-50%);
+        border-left: 15px solid #fff;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+    }
+}
+
+.player-off{
+    &:before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%,-50%);
+        border: 15px solid #fff;
+        border-left: 2px solid #fff;
+        border-right: 2px solid #fff;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%,-50%);
+        border: 15px solid #fff;
+        border-left: 2px solid #fff;
+        border-right: 2px solid #fff;
+    }
+}
+
+.line-after{
+    &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 200%;   
+        height: 0;
+        border-bottom: 1px solid #6a6b6f;
+        transform-origin: 0 0;
+        transform: scale(.5);
+    }
+}
+
+
+.player{
+    position: relative;
+    width: 400px;
+    height: 100px;
+    box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.1),
+                0 4px 1px 0 rgba(0, 0, 0, 0.1),
+                0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    user-select: none;
+    &-pic{
+        position: relative;
+        float: left;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        img{
+            width: 100%;
+        }
+        .ctrl{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -25px 0 0 -25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #d94240;
+        }
+    }
+    &-control{
+        float: left;
+        position: relative;
+        width: 300px;
+        height: 100%;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        .name{
+            font-size: 16px;
+            font-weight: 600;
+            color: #6a6b6f;
+  
+        }
+        .author{
+            max-width: 90%;
+            font-size: 12px;
+            color: #666;
+  
+        }
+        .process{
+            position: relative;
+            width: 100%;
+            height: 6px;
+            border-radius: 5px;
+            margin: 10px 0; 
+            background-color: #ebebf8;
+            overflow: hidden;
+            cursor: pointer;
+            // .ctrl{
+            //     position: absolute;
+            //     top: 50%;
+            //     margin-top: -6px;
+            //     margin-left: -3px;
+                
+            // }
+            .process-loading,.process-update{
+                position: absolute;
+                width: 0;
+                height: 6px;
+                top: 50%;
+                margin-top: -3px;
+            }
+            .process-loading{
+                background-color: #d3d3e0;
+            }
+            .process-update{
+                background-color: #d94240;
+            }
+        }
+        .time{
+            float: left;
+            width: 100px;
+            font-size: 14px;
+            color: #666;
+            
+        }
+        .volume{
+            position: relative;
+            float: left;
+            top: 2px;
+            width: 145px;
+            height: 14px;
+            line-height: 14px;
+            cursor: pointer;
+            &-percent{
+                position: absolute;
+                top: 0;
+                left: 25px;
+                width: 120px;
+                height: 100%;
+                border-radius: 15px;
+                background-color: #ebebf2;
+                overflow: hidden;
+            }
+            &-line{
+                position: absolute;
+                // top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #d94240; 
+                transition: 0.2s;
+            }
+
+        }
+        .menu{
+            
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .mode{
+            position: absolute;
+            top: 33px;
+            right: 18px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+    }
+    
+    &-song-wrap{
+        // display: none;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        padding-top: 5px;
+        width: 100%;
+        height: 100px;
+        background-color: #fff;
+        box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.1),
+                    0 4px 1px 0 rgba(0, 0, 0, 0.1),
+                    0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        .scrollbar-wrap{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 15px;
+            height: 105px;
+            background-color: #fff;
+            z-index: 10;
+            
+        }
+        .scrollbar{
+            position: absolute;
+            width: 10px;
+            height: 20%;
+            top: 0;
+            right: 0;
+            background-color: #000;
+          
+        }
+        .player-song-list{
+            
+            .player-song{
+                position: relative;
+                width: 100%;
+                height: 35px;
+                line-height: 35px;
+                box-sizing: border-box;
+                padding: 0 15px; 
+                span{
+                    font-size: 12px;
+                    color: #6a6b6f;
+                }
+                .song-name{
+                    margin-left: 15px;
+                }
+                .song-author{
+                    float: right;
+                    max-width: 120px;
+                }
+            }
+        }    
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    
+    <title>音乐播放器</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0; 
+        }
+    </style>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_687735_hvxfykfrfhfflxr.css">
+</head>
+<body>
+    <div class="player clearfix" id="player">
+        <audio  id="audio" class="audio"></audio>
+        <div class="player-pic">
+            <img src="" alt="">
+            <div class="ctrl player-on"></div>
+        </div>
+        <div class="player-control">
+            <div class="name shengl">打算送给</div>
+            <div class="author shengl">打算送给对手帝国时代手帝国时代手帝国时代手帝国时代</div>
+            <div class="process">
+                <div class="process-loading"></div>
+                <div class="process-update"></div>
+            </div>
+            <div class="time">
+                <span class="cur">00:00</span>/<span class="total">15:15</span>
+            </div>
+            <div class="volume">
+                <i class="voice iconfont icon-voice-on"></i>
+                <div class="volume-percent">
+                    <div class="volume-line"></div>
+                </div>
+            </div>
+            <i class="menu iconfont icon-menu"></i>
+            <i class="mode iconfont icon-order"></i>
+        </div>
+
+        <div class="player-song-wrap hide">
+            <div class="scrollbar-wrap">
+                <div class="scrollbar"></div>
+            </div>
+            <ul class="player-song-list">
+                <!-- <li class="player-song line-after">
+                    <span class="song-index">1</span>
+                    <span class="song-name">打算打算送给送给</span>
+                    <span class="song-author shengl">打算算送给算送给算送给算送给算送给算送给算送给送给打算送给</span>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
